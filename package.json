@@ -1,0 +1,21 @@
+{
+  "author": "Cox Media Group <opensource@coxinc.com>",
+  "contributors": [
+    {
+      "email": "dutret@gmail.com",
+      "name": "Alex Dreyer"
+    }
+  ],
+  "dependencies": {
+    "ampq": "0.1.3",
+    "socket.io": "0.9.6"
+  },
+  "description": "a proof of concept link bewtween socket.io clients and rabbitmq intended for use with django and marimo.",
+  "license": "MIT",
+  "name": "browsermq",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/coxmediagroup/browsermq.git"
+  },
+  "version": "0.0.1"
+}
