@@ -1,0 +1,20 @@
+<h1>Not valid html</h1>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://mordechai.cei.cox.com:8000');
+  socket.on('news', function (data) {
+    console.log(data);
+    socket.emit('my other event', { my: 'data' });
+  });
+  var subscribe = function(routing_key, handler) {
+    socket.on(routing_key, handler);
+    socket.emit('subscribe_queue', routing_key);
+  };
+  var simplesub = function(routing_key) {
+    subscribe(routing_key, function(message){
+      console.log(message);
+    });
+  };
+    simplesub('test.queue1');
+    simplesub('test.queue2');
+</script>
