@@ -6,7 +6,7 @@ var fs = require('fs')
 var subscribe = require('../lib/subscribe').subscribe
 
 var app = http.createServer(handler)
-app.listen(8000);
+app.listen(8008);
 var io = socket.listen(app)
 
 
