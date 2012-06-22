@@ -3,7 +3,7 @@ var http = require('http')
 var socket = require('socket.io')
 var fs = require('fs')
 
-var subscribe = require('../lib/subscribe').subscribe
+var subscribe = require('../lib/broker').subscribe
 
 var app = http.createServer(handler)
 app.listen(8008);
