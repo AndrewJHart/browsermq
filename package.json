@@ -13,7 +13,8 @@
   },
   "devDependencies": {
     "sandboxed-module": "0.1.3",
-    "nodemock": "0.2.17"
+    "nodemock": "0.2.17",
+    "nodeunit": "0.7.4"
   },
   "description": "a proof of concept link bewtween socket.io clients and rabbitmq intended for use with django and marimo.",
   "license": "MIT",
