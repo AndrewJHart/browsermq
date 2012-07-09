@@ -1,28 +1,8 @@
 #!/usr/bin/env node
-var http = require('http')
-var socket = require('socket.io')
-var fs = require('fs')
+var broker = require('../lib/broker').subscribe;
+var config = require('../lib/config').config;
 
-var broker = require('../lib/broker').subscribe
-
-var app = http.createServer(handler)
-app.listen(8008);
-var io = socket.listen(app)
-
-
-function handler (req, res) {
-  console.log(__dirname)
-  fs.readFile(__dirname + '/../static/index.html',
-  function (err, data){
-    if (err) {
-      res.writeHead(500);
-      return res.end('Error loading index.html');
-    }
-
-    res.writeHead(200);
-    res.end(data);
-  });
-}
+var io = require('socket.io').listen(config.port);
 
 
 io.sockets.on('connection', function (socket) {
